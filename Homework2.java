@@ -1,16 +1,16 @@
 import java.util.Scanner;
 
 class Student {
-    private int studentId;
+    private long studentId;
     private String name;
     private String major;
     private long phone;
 
-    public int getStudentId() {
+    public long getStudentId() {
         return studentId;
     }
 
-    public void setStudentId(int studentId) {
+    public void setStudentId(long studentId) {
         this.studentId = studentId;
     }
 
@@ -51,7 +51,7 @@ class Homework2 {
 
         for (int i = 0; i < students.length; i++) {
             System.out.print("학생의 학번, 이름, 전공, 전화번호를 입력하세요: ");
-            int studentId = Integer.parseInt(sc.next());
+            long studentId = Long.parseLong(sc.next());
             String name = sc.next();
             String major = sc.next();
             long phone = Long.parseLong(sc.next());
