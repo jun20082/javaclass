@@ -2,8 +2,13 @@ import java.util.Scanner;
 
 class Homework4 {
     static int gcd(int m, int n) {
+        m = Math.abs(m);
+        n = Math.abs(n);
         if (n == 0) {
             return m;
+        }
+        if (m == 0) {
+            return n;
         }
         return gcd(Math.min(m, n), Math.max(m, n) % Math.min(m, n));
     }
@@ -23,7 +28,12 @@ class Homework4 {
 
 class Homework4Iterative {
     static int gcd(int m, int n) {
+        m = Math.abs(m);
+        n = Math.abs(n);
         while (n != 0) {
+            if (m == 0) {
+                return n;
+            }
             int smaller = Math.min(m, n);
             int larger = Math.max(m, n);
             int remainder = larger % smaller;
